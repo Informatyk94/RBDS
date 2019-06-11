@@ -35,8 +35,17 @@
                                     <button type="submit">Wyloguj</button>
                                 </form></div>
 
+
                     <?
+                    $mysqli = new mysqli("58897.m.tld.pl", "admin58897_baza_1", "0Xh5WLd259", "baza58897_baza_1");
+                    if(mysqli_connect_errno()){
+                        prontf("Connect dailed: %s\n", mysqli_connect_error());
+                    }
+
                     $users = get_users();
+
+                    echo "Ilość użytkowników w bazie: " . sizeof($users);
+
                     for($i = 0; $i < sizeof($users); $i++){
                         ?>
                             <tr>
