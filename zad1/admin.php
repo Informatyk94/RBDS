@@ -21,9 +21,9 @@
                     if(!empty($_POST)){
                         if(isset($_POST['user_name']) && isset($_POST['user_password'])){
                             if(login($_POST['user_name'], $_POST['user_password'])){
-                                echo "Logowanie pomyślne";
+                                echo "<h2>Logowanie pomyślne</h2>";
                             }else{
-                                echo "logowanie niepomyślne";
+                                echo "<h2>logowanie niepomyślne</h2>";
                             }
                         }
                     }
@@ -36,7 +36,7 @@
                                 </form></div>
 
 
-                    <?
+                    <?php
                     $mysqli = new mysqli("58897.m.tld.pl", "admin58897_baza_1", "0Xh5WLd259", "baza58897_baza_1");
                     if(mysqli_connect_errno()){
                         prontf("Connect dailed: %s\n", mysqli_connect_error());
@@ -44,16 +44,24 @@
 
                     $users = get_users();
 
+                    ?>
+                        <div class="score">
+                    <?php
                     echo "Ilość użytkowników w bazie: " . sizeof($users);
 
+                    ?>
+                        </div>
+                    <?php
                     for($i = 0; $i < sizeof($users); $i++){
                         ?>
                             <tr>
                                 <td>
-                                    <? echo users[$i]['user_name']; ?>
+                                    <?php 
+                                        echo $users[$i]['user_name']; 
+                                    ?>
                                 </td>
                             </tr>
-                        <?
+                        <?php
                     }
                 }else{
                     ?>
@@ -66,8 +74,9 @@
                             <input type="password" id="inputPassword" name="user_password" class="form-control" placeholder="Password" required="">
                             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                         </form>
-                    <?
-                }?>
+                    <?php
+                }
+                ?>
         <div class="col-6 col-md-4"></div>
     </div>
 </div>
