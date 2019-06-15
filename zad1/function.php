@@ -34,3 +34,11 @@ function get_users(){
     }
     return $response;
 }
+
+// function set_users($user_name, $user_password, $place){
+//     $sql = 'insert into users set user_name="$user_name", user_password="$user", place="$place"';
+//     if ($result = $GLOBALS["mysqli"]->query($sql)) {
+//         echo "dodano";
+//     }
+//     echo "nie dodano"
+// }

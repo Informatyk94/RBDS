@@ -52,17 +52,40 @@
                     ?>
                         </div>
                     <?php
+                    ?>
+                    <div class="scoreTitle">Lista wszystkich użytkowników</div>
+                        <ol>
+                    <?php
                     for($i = 0; $i < sizeof($users); $i++){
                         ?>
-                            <tr>
-                                <td>
-                                    <?php 
-                                        echo $users[$i]['user_name']; 
-                                    ?>
-                                </td>
-                            </tr>
+                            <li>
+                                <?php 
+                                    echo $users[$i]['user_name']; 
+                                    echo " Lokalizacja: ";
+                                    echo $users[$i]['place'];
+                                ?>
+                            </li>
                         <?php
                     }
+                    ?>
+                        </ol>
+                        <div class="containerAddUser">
+                            <form class="form-signin form" action="addUser.php" method="post">
+                                <h1 class="h3 mb-3 font-weight-normal login">Dodaj użytkownika</h1>
+                                <label for="inputEmail" class="sr-only">Login</label>
+                                <input type="text" id="inputEmail" name="user_name"  class="form-control" placeholder="Email address" required="" autofocus="">
+                                <label for="inputPassword" class="sr-only">Hasło</label>
+                                <input type="password" id="inputPassword" name="user_password" class="form-control" placeholder="Password" required="">
+                                <label for="exampleFormControlSelect2">Example multiple select</label>
+                                <select multiple class="form-control" name="place">
+                                    <option value="1">earth</option>
+                                    <option value="2">mars</option>
+                                    <option value="3">moon</option>
+                                </select>
+                                <button class="btn btn-lg btn-primary btn-block" type="submit">Dodaj</button>
+                            </form>
+                        <div>
+                    <?php
                 }else{
                     ?>
                         <form class="form-signin form" action="admin.php" method="post">

@@ -23,6 +23,12 @@ h1{
     margin: auto;
     width: 100%;
 }
+.scoreTitle{
+    color: white;
+    display: block;
+    text-align: left;
+    width: 100%;
+}
 .section{
     padding-top: 100px;
     display: flex;
@@ -59,4 +65,11 @@ a:hover{
 }
 h2{
     color: white;
+}
+ol{
+    color: white;
+}
+.containerAddUser{
+    display: block;
+    width: 100%;
 }
