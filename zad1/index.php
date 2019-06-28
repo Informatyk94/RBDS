@@ -22,13 +22,13 @@
                         Księżyc
                     </h4>
                 </a>
-                <a href="/" class="section__box">
+                <a href="ziemia.php" class="section__box">
                     <img class="image__box" src="style/image/ziemia/icons.jpg" alt="sekcja">
                     <h4 class="title__section">
                         Ziemia
                     </h4>
                 </a>
-                <a href="/" class="section__box">
+                <a href="mars.php" class="section__box">
                     <img  class="image__box" src="style/image/mars/icon.jpg" alt="sekcja">
                     <h4 class="title__section">
                         Mars

@@ -98,6 +98,8 @@
                             <input type="password" id="inputPassword" name="user_password" class="form-control" placeholder="Password" required="">
                             <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
                         </form>
+
+                        <a class="admin__link" href="/rbds/zad1/">Wróć do menu głównego</a>
                     <?php
                 }
                 ?>

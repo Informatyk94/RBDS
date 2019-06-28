@@ -73,3 +73,14 @@ ol{
     display: block;
     width: 100%;
 }
+
+.admin__link{
+    color: #0077b4;
+}
+.admin__link:hover{
+    color: #0635a0;
+}
+
+.list__box{
+
+}
