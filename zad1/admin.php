@@ -17,6 +17,7 @@
         <div class="col-6 col-md-4">
             <?php
                 require_once ("function.php");
+                require_once ("database.php");
                 if($_SERVER["REQUEST_METHOD"] == "POST"){
                     if(!empty($_POST)){
                         if(isset($_POST['user_name']) && isset($_POST['user_password'])){
